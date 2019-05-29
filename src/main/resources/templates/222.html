@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label th:text="#{login.username}">Email address</label>
+<div th:utext="${h}"><a th:href="@{/templates/main.html(l='en_US')}">点击一下</a></div>
+</body>
+</html>
