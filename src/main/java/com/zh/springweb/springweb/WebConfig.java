@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
 import org.springframework.web.servlet.config.annotation.*;
 
-
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {
 
@@ -17,6 +16,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("/").setViewName("login");
         registry.addViewController("/index.html").setViewName("login");
         registry.addViewController("/main.html").setViewName("main");
+        registry.addViewController("/tables.html").setViewName("tables");
     }
 
     @Override
@@ -33,6 +33,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         addInterceptor.excludePathPatterns("/webjars/**");//排除静态资源
         addInterceptor.excludePathPatterns("/index.html");
         addInterceptor.excludePathPatterns("/login");
+        addInterceptor.excludePathPatterns("/json/**");
 
         // 拦截配置
         addInterceptor.addPathPatterns("/**");

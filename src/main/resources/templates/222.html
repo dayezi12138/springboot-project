@@ -5,7 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-<label th:text="#{login.username}">Email address</label>
-<div th:utext="${h}"><a th:href="@{/templates/main.html(l='en_US')}">点击一下</a></div>
+<!--<label th:text="#{login.username}">Email address</label>-->
+<!--<div th:utext="${h}"><a th:href="@{/templates/main.html(l='en_US')}">点击一下</a></div>-->
+
+<!--    <thead>-->
+<!--    <tr>-->
+<!--        <th>序号</th>-->
+<!--        <th>用户名</th>-->
+<!--    </tr>-->
+<!--    <tr th:each="user:${headRightBeans}">-->
+<!--        <td th:text="${user.name}"></td>-->
+<!--        <td th:text="${user.url}"></td>-->
+<!--    </tr>-->
+<!--    </thead>-->
+
+    <div th:each="user:${headRightBeans}">
+        <h1 th:text="${user.name}"></h1>
+        <h2 th:text="${user.url}"></h2>
+    </div>
 </body>
 </html>
